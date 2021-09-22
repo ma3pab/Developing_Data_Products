@@ -1,0 +1,51 @@
+---
+title: "Data Products Presentation"
+date: "17/09/2021"
+output: ioslides_presentation
+widescreen: true
+---
+
+
+## Introduction to the App... {data-background=#D3D3D3 .smaller}
+
+<b>Ever wondered which advertising channel can help achieve more sales.... the following app could help!</b> 
+
+### The Project
+- The developing data products application uses Shiny to create an application which helps to solve this question
+- There is an interavtive application hosted on ShinyApps.io and the Github page which contains all the underlying code
+
+### The App 
+- The applcation focusses on analysing company sales revenue given the spend on difference marketing channels; specifically on newspaper advertising, youtube or facebook
+- The app allows the user to select the advertising type in order to display a plot of sales versus advertising spend including a regression line
+- A slider allows the user to enter an advertising spend for a given channel and returns the predicted sales revenue it would generate
+
+
+
+## Visualising the Data... {data-background=#D3D3D3 .smaller} 
+
+```{r cars, echo = TRUE}
+library(datarium) 
+library(ggplot2)
+data("marketing", package = "datarium")
+plot(marketing, main = "Summary Scatterplots of Sales Revenue and Advertising Spend by Channel")
+```
+
+## The Server Calculation... {data-background=#D3D3D3}
+- Below is the Server Calculation within the App, users can change the dropdown to visualise the sales revenue and predict sales for a given advertising spend
+
+```{r, echo=FALSE, out.width = "90%"}
+   knitr::include_graphics('./ServerCalculation.png')
+```
+
+
+## Where can I find the App... {data-background=#D3D3D3}
+
+<b> Please download and use the app! </b>
+
+- The application can be run from the following address:
+https://ma3pab.shinyapps.io/Marketing_Spend_Application/
+
+- The underlying source code for replication can be found here on github:
+https://github.com/ma3pab/Developing_Data_Products
+
+
